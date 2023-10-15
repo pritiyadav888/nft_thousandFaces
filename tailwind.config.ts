@@ -8,12 +8,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      animation: {
+        'gradient-x': 'gradient-x 15s ease infinite',
+        'gradient-y': 'gradient-y 15s ease infinite',
       },
-    },
+      keyframes: {
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': '200% 0'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': '0 0'
+          }
+        },
+        'gradient-y': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': '0 200%'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': '0 0'
+          }
+        }
+      }
+    }
   },
   plugins: [],
 }

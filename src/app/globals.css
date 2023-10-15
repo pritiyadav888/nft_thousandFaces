@@ -8,6 +8,12 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -17,11 +23,78 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #2c2d31, #48687b, #1c3e4a, #4e5741);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+}
+
+.bg-white {
+  padding: 2rem;
+  border: 1px solid #282323;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+.title{
+
+  margin-bottom: 3rem;
+  
+}
+
+.bg-gradient-to-r {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+
+}
+
+.form-container {
+  max-width: 50vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #d1d1d1;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out;
+  &:focus {
+      border-color: #4c3365;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(76, 51, 101, 0.2);
+  }
+}
+.text-white {
+  color: white;
+}
+button {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4c3365;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+      background-color: #392952;
+  }
 }
