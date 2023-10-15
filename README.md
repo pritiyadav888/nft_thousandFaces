@@ -9,7 +9,7 @@ To get a copy of this project and run it locally, follow these steps:
 ### Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone [Repo](https://github.com/pritiyadav888/nft_thousandFaces.git)
 cd founder-application
 npm install
 npm run dev
