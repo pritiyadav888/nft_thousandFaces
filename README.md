@@ -14,6 +14,7 @@ cd founder-application
 npm install
 npm run dev
 
+```
 ## Components
 
 ### _app.js
