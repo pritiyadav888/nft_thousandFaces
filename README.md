@@ -87,8 +87,8 @@ This component displays a user's profile, including a link to their LinkedIn, a 
 
 You can access the following pages:
 
-- [Form Page](http://localhost:3000/Form)
-- [UserProfile Page](http://localhost:3000/UserProfile)
+- [Form Page](public/form.png)
+- [UserProfile Page](public/profile.png)
 
 ## Styling
 
